@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="SeeBelow: Sub-dermal 3D Reconstruction of Tumors with Surgical
+Robotic Palpation and Tactile Exploration">
+  <meta name="keywords" content="Representation Learning, Tactile Sensing, Imitation Learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SeeBelow: Sub-dermal 3D Reconstruction of Tumors with Surgical
+Robotic Palpation and Tactile Exploration</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">SeeBelow: Sub-dermal 3D Reconstruction of Tumors with Surgical
+Robotic Palpation and Tactile Exploration</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://www.raghavauppuluri.dev/">Raghava Uppuluri</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/abhi-bjee/">Abhinaba Bhattacharjee</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://soanwar.pages.iu.edu/">Sohel Anwar</a>,
+            </span>
+            <span class="author-block">
+                <a href="https://www.purduemars.com/">Yu She</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Purdue University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. 
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2408.06481"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              -->
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://drive.google.com/file/d/1OhyeUqRJk8TCdKvPV1WxwnCOze-N-eAt/view?usp=sharing"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/raghavauppuluri13/seebelow"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. 
+              <span class="link-block">
+                <a href="https://drive.google.com/drive/folders/1CkPqgNFCE6B1mr2pxYdNdSR-xAkSnxQc?usp=sharing"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-centered">
+          <img id="teaser" src="./static/videos/first_page_reduced.gif" alt="First Page Image" width="100%">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+Surgical scene understanding in Robot assisted
+Minimally Invasive Surgery (RMIS) is highly reliant on visual
+cues lacking tactile perception of the surgical anatomy. Haptic
+feedback based optimal force modulated surgical palpations
+are necessary for localization, geometry or depth estimation
+and dexterous exploration of mini-tumors, lumps and abnormal
+stiff inclusions of underlying subsurface tissue layers. Prior
+works explored surface level tissue abnormalities or single
+layered tissue-tumor embeddings with >300 palpations for
+dense 2D stiffness mapping. Our approach focuses on 3D
+reconstructions of sub-dermal tumor surface profile in multi-
+tissue-layered (skin-fat-muscle) 3D printed tumor embeddings
+using a visually guided novel tactile navigation policy. A robotic
+palpation probe with custom designed palpation end-effector
+comprising external tri-axial force sensing was leveraged for
+tactile exploration of the phantom. The exploration policy
+initiates with a surgical scene registration engaging surgeon-
+in-the-loop tumor annotated region of interest (ROI) selection
+on depth camera generated phantom surface point clouds.
+The specified surgical scene is transformed into a interpolated
+surface grid map to optimally locate tumor coordinates using
+Bayesian Optimization based probing for stiffness mapping.
+Detected tumor coordinates are further explored with a tumor
+contour following contact-safe impedance controller to trace the
+sub-dermal tumor geometry across their depths reaching the
+underlying tumor-tissue boundary. Projections of these contour
+following palpation trajectories allows 3D reconstruction of
+the subdermal tumor surface profile in less than 100 palpations. Our
+approach ensures high fidelity geometry estimations and 3D
+surface reconstructions of rigid tumor embeddings in tissue
+layers with isotropic elasticities, although soft tumor geometries
+with variable an-isotropic elasticities are yet to be explored.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://github.com/raghavauppuluri13" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            The template of this website is adapted from <a
+              href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
